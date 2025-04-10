@@ -18,7 +18,7 @@ import com.example.demo.model.PatientModel;
 import com.example.demo.service.PatientService;
 
 @RestController
-/* @CrossOrigin(origins="http://locahost:5173") */
+//@CrossOrigin(origins="http://localhost:5173") 
 /* @CrossOrigin("*") */
 public class PatientController {
 
@@ -66,8 +66,8 @@ public class PatientController {
 		}
 		
 	}
-	@GetMapping("/searchPatientById/{Dr_id}")
-	public  PatientModel searchDoctorById(@PathVariable("Dr_id")Integer id) {
+	@GetMapping("/searchPatientById/{P_ID}")
+	public  PatientModel searchPatientById(@PathVariable("P_ID")Integer id) {
 		PatientModel dr=PtService.getPatientById(id);
 		if(dr!=null) {
 			return dr;
